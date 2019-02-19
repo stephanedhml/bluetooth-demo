@@ -26,6 +26,7 @@
     "@types/web-bluetooth": "0.0.4",
     "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.5.4",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "path": "^0.12.7",
     "rxjs": "~6.3.3",
