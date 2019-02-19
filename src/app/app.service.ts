@@ -7,7 +7,7 @@ import { map, mergeMap, filter, switchMap } from 'rxjs/operators';
 @Injectable({ providedIn: 'root' })
 export class AppService {
 
-    baseUrl: string = 'http://localhost:3000/';
+    baseUrl: string = 'https://json-api-app.herokuapp.com/';
     detokenizeUrl: string = '/vts/rest/v2.0/detokenize'
     password: string = 'Ssl12345#'
     httpOptions = {

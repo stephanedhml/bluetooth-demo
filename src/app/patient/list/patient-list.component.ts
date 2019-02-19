@@ -25,7 +25,6 @@ export class PatientListComponent extends AppComponent implements OnInit {
 
   constructor(protected appService: AppService, protected router: Router, protected cd: ChangeDetectorRef) {
     super(appService, router, cd)
-    console.log('pation ;list')
   }
 
   ngOnInit() {
@@ -35,30 +34,30 @@ export class PatientListComponent extends AppComponent implements OnInit {
   loadData(){
     this.changeRole(JSON.parse(localStorage.getItem('session')).role);
     this.appService.get(this.url).subscribe((data: Array<any>)  => {
-      this.data = []
-      console.log(this.role)
-      for (let patient of data){
-        this.appService.detokenize(this.role, patient.ssn).then(response => {
-                patient['ssn'] = response['data'];
-                if(this.role != 'doctor'){
-                  this.appService.detokenize(this.role, patient.cc).then(response => {
-                          patient['cc'] = response['data'];
-                          this.data.push(patient);
-                          this.dataSource.data = this.data;
-                        },
-                  error => {
-                    console.log(error)
-                  });
-                }
-                else{
-                  this.data.push(patient);
-                  this.dataSource.data = this.data;
-                }
-              },
-        error => {
-          console.log(error)
-        });
-      }
+      // this.data = []
+      this.dataSource.data = data;
+      // for (let patient of data){
+      //   this.appService.detokenize(this.role, patient.ssn).then(response => {
+      //           patient['ssn'] = response['data'];
+      //           if(this.role != 'doctor'){
+      //             this.appService.detokenize(this.role, patient.cc).then(response => {
+      //                     patient['cc'] = response['data'];
+      //                     this.data.push(patient);
+      //                     this.dataSource.data = this.data;
+      //                   },
+      //             error => {
+      //               console.log(error)
+      //             });
+      //           }
+      //           else{
+      //             this.data.push(patient);
+      //             this.dataSource.data = this.data;
+      //           }
+      //         },
+      //   error => {
+      //     console.log(error)
+      //   });
+      // }
     });
   }
 
