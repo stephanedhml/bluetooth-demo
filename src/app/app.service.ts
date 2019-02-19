@@ -8,7 +8,7 @@ import { map, mergeMap, filter, switchMap } from 'rxjs/operators';
 export class AppService {
 
     baseUrl: string = 'https://json-api-app.herokuapp.com/';
-    detokenizeUrl: string = '/vts/rest/v2.0/detokenize'
+    detokenizeUrl: string = 'https://ec2-35-172-115-4.compute-1.amazonaws.com/vts/rest/v2.0/detokenize'
     password: string = 'Ssl12345#'
     httpOptions = {
       headers: new HttpHeaders({
