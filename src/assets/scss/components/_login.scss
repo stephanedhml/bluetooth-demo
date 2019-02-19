@@ -1,0 +1,74 @@
+//login
+
+.landingpage--title {
+  font-size: 43px;
+  font-weight: 700;
+}
+
+.landingpage--sub-title {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.login-form-container{
+  width: 100%;
+  text-align: center;
+  padding: 100px;
+}
+
+.scan-ring--button {
+  padding: 1px 19px !important;
+}
+
+.add-user--link {
+  color: white;
+  padding-right:10px;
+  font-size: 13px;
+  &:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.link--container{
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.ring-img {
+  width: 100px;
+}
+
+.ring-img--container {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0px;
+}
+
+a:hover{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.welcome-message {
+  display: none;
+  font-size: 22px;
+  font-family: roboto;
+  &.fadeIn {
+    display: block;
+    -webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}

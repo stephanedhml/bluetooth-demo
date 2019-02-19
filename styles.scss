@@ -1,0 +1,90 @@
+table tr {
+  cursor: pointer;
+}
+table tr:hover {
+  background: rgba(105, 163, 189, 0.1);
+}
+
+.row {
+  margin: 0px !important;
+}
+
+.page-title {
+  display: inline-block;
+}
+
+.back-button {
+  position: relative;
+  top: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.back-button:hover {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.login-form-container {
+  width: 100%;
+  text-align: center;
+  padding: 100px;
+}
+
+.navbar {
+  display: block !important;
+  background-color: #2574a9;
+  color: white;
+}
+
+.navbar-logo {
+  padding-left: 0px;
+  color: white !important;
+}
+
+.navbar-right {
+  line-height: 38px;
+  float: right;
+}
+
+.logout-button {
+  font-size: 13px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.logout-button:hover {
+  font-weight: bold;
+}
+
+.sidenav-container {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.54);
+  padding-top: 20px;
+}
+
+.sidenav-body-content {
+  height: calc(100vh - 56px) !important;
+  padding-top: 20px;
+}
+
+.sidenav-tab {
+  padding: 5px 50px 5px 5px;
+  margin-top: 5px;
+  border-left: 5px solid transparent;
+  cursor: pointer;
+}
+.sidenav-tab:hover {
+  border-left: 5px solid white;
+  background: rgba(105, 163, 189, 0.1);
+}
+
+.sidenav-tab-title {
+  display: inline-block;
+}
+
+.sidenav-tab-icon {
+  position: relative;
+  top: 2px;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=styles.scss.map */

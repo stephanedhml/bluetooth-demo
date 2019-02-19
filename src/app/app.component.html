@@ -1,0 +1,49 @@
+<nav class="navbar navbar-light" [ngClass]="{'nav-bar--small': loggedIn}">
+  <span class="mat-typography navbar-logo navbar-brand mb-0 h1"><img src="./assets/img/thales_logo.png" class="navbar-logo"></span>
+  <span class="navbar-right add-user--link" (click)="addUser()" *ngIf="!loggedIn">Add Ring</span>
+  <span class="navbar-right logout-button" (click)="logout()" *ngIf="loggedIn">Logout</span>
+  <!-- <img src="./assets/img/{{userRole}}.png" *ngIf="username && loggedIn" class="user-icon"> -->
+  <span class="navbar-right navbar-username" *ngIf="username && loggedIn">Welcome <strong>{{username}}</strong></span>
+  <div class="container nav-container" *ngIf="!loggedIn">
+    <div class="row nav-row">
+      <div class="login-form-container">
+        <div class="landingpage--title">Vormetric Tokenization Server</div>
+        <div class="landingpage--sub-title">Dynamic Data Masking</div>
+        <div *ngIf="!loading">
+          <div class="example-button-row">
+            <!-- <button mat-raised-button color="basic" (click)="connectToRing()">Scan Ring</button> -->
+            <button mat-raised-button color="basic" class="scan-ring--button" (click)="login()">Scan Ring</button>
+          </div>
+        </div>
+        <div *ngIf="loading">
+          <div class="example-button-row">
+            <div *ngIf="user?.length == 0">
+              <svg version="1.1" id="L3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+              <circle fill="none" stroke="#ecf0f1" stroke-width="10" cx="50" cy="50" r="44" style="opacity:0.5;"/>
+                <circle fill="#fff" stroke="#22a7f0" stroke-width="6" cx="8" cy="54" r="6" >
+                  <animateTransform
+                    attributeName="transform"
+                    dur="2s"
+                    type="rotate"
+                    from="0 50 48"
+                    to="360 50 52"
+                    repeatCount="indefinite" />
+                </circle>
+              </svg>
+            </div>
+            <div class="welcome-message" [ngClass]="{'fadeIn': user?.length > 0}">
+              Welcome {{user}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer-content class="body-content" [ngClass]="{'body-content--streched': loggedIn}">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

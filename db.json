@@ -1,0 +1,90 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "John Brown",
+      "ssn": "DBkgSPZs^8Z",
+      "dob": "05/13/1990",
+      "cc": "Ufk 6i#&<lvmYblW",
+      "lastpayment": "Dec 15",
+      "balancedue": "1200",
+      "allergies": "Gluten",
+      "medication": "Cough Syrup",
+      "lastappointment": "10/13/2018",
+      "insurance": "Fidelity"
+    },
+    {
+      "id": 2,
+      "name": "Aubrey Blumenthal",
+      "ssn": "%)VV6R)qJ44",
+      "dob": "01/15/1983",
+      "cc": "6!@j+p;1JMiF=_'`",
+      "lastpayment": "Jan 19",
+      "balancedue": "0",
+      "allergies": "Lactose",
+      "medication": "None",
+      "lastappointment": "10/13/2018",
+      "insurance": "United Healthcare"
+    },
+    {
+      "id": 3,
+      "name": "Celinda Music",
+      "ssn": "XJ!`7S*$oU/",
+      "dob": "10/25/1966",
+      "cc": "V1L[8qUYaC;BI5^c",
+      "lastpayment": "Jul 18",
+      "balancedue": "64",
+      "allergies": "Eggs",
+      "medication": "Hydrocodone, Lisinopril",
+      "lastappointment": "10/13/2018",
+      "insurance": "Aetna"
+    },
+    {
+      "id": 4,
+      "name": "Hyo Eagle",
+      "ssn": "6rYh[e*AC$,",
+      "dob": "02/01/1999",
+      "cc": "czz~3SwIhS<F9i~o",
+      "lastpayment": "Sep 17",
+      "balancedue": "0",
+      "allergies": "None",
+      "medication": "Azithromycin",
+      "lastappointment": "10/13/2018",
+      "insurance": "Fidelity"
+    },
+    {
+      "id": 5,
+      "name": "Jacob Reeves",
+      "ssn": "[]4%Nf.Z>:9",
+      "dob": "04/11/2000",
+      "cc": "?IzQSz-%:<fN g1A",
+      "lastpayment": "Nov 18",
+      "balancedue": "100",
+      "allergies": "Shellfish",
+      "medication": "Hydrochlorothiazide ",
+      "lastappointment": "10/13/2018",
+      "insurance": "HCSC"
+    },
+    {
+      "id": 6,
+      "name": "Audrey Hopkins",
+      "ssn": "YfPPd:H'Z79",
+      "dob": "06/11/1976",
+      "cc": "nM|s]P&La/qYIfs*",
+      "lastpayment": "Apr 16",
+      "balancedue": "220",
+      "allergies": "Peanuts, Wheat",
+      "medication": "Amoxicillin ",
+      "lastappointment": "10/13/2018",
+      "insurance": "Wellcare"
+    }
+  ],
+  "users": [
+    {
+      "name": "Stephane",
+      "role": "doctor",
+      "ring": "Motiv-ad7a",
+      "id": 1
+    }
+  ]
+}

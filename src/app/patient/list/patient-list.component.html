@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <section class="mat-typography">
+      <h1 class="list-title">Patient list</h1>
+    </section>
+  </div>
+  <div class="row">
+      <mat-form-field class="col">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+      </mat-form-field>
+  </div>
+  <div class="row">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" class="col">
+      <ng-container *ngFor="let object of objectNames[role] | keyvalue ">
+        <ng-container matColumnDef="{{object.key}}">
+          <th mat-header-cell *matHeaderCellDef> {{object.value}} </th>
+          <td mat-cell *matCellDef="let element"> {{element[object.key]}} </td>
+        </ng-container>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

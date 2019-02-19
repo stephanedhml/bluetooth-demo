@@ -1,0 +1,191 @@
+table tr {
+  cursor: pointer;
+}
+
+table tr:hover {
+  background: rgba(105, 163, 189, 0.1);
+}
+
+table {
+  margin-bottom: 30px;
+}
+
+.row {
+  margin: 0px !important;
+}
+
+.back-button {
+  position: relative;
+  top: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.back-button:hover {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.delete-button {
+  margin-left: 10px !important;
+}
+
+.page-title {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.example-margin label {
+  margin-top: 6px;
+  margin-right: 6px;
+}
+
+.login-form-container {
+  width: 100%;
+  text-align: center;
+  padding: 100px;
+}
+
+.add-user--link {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.welcome-message {
+  display: none;
+  font-size: 22px;
+  font-family: roboto;
+}
+.welcome-message.fadeIn {
+  display: block;
+  -webkit-animation: fadeIn 2s;
+  animation: fadeIn 2s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.navbar {
+  display: block !important;
+  background-color: #336e7b;
+  color: white;
+}
+
+.navbar-logo {
+  padding-left: 0px;
+  color: white !important;
+}
+
+.user-icon {
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.navbar-right {
+  line-height: 38px;
+  float: right;
+}
+
+.logout-button {
+  font-size: 12px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.logout-button:hover {
+  text-decoration: underline;
+}
+
+.navbar-username {
+  font-size: 13px;
+  padding-right: 10px;
+}
+
+.sidenav-container {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.54);
+  padding-top: 20px;
+}
+
+.sidenav-body-content {
+  height: calc(100vh - 56px) !important;
+  padding-top: 20px;
+}
+
+.sidenav-tab {
+  padding: 5px 50px 5px 5px;
+  margin-top: 5px;
+  border-left: 5px solid transparent;
+  cursor: pointer;
+}
+.sidenav-tab:hover {
+  border-left: 5px solid white;
+  background: rgba(105, 163, 189, 0.1);
+}
+
+.sidenav-tab-title {
+  display: inline-block;
+}
+
+.sidenav-tab-icon {
+  position: relative;
+  top: 2px;
+  font-size: 15px;
+}
+
+.form-container {
+  width: 100%;
+  background: white;
+  padding: 40px 60px;
+  border-radius: 2px;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.ring-information {
+  margin-right: 20px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #464a4c;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.form-error {
+  padding-bottom: 10px;
+  color: red;
+}
+
+svg {
+  width: 50px;
+  height: 55px;
+  margin: 20px;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=styles.css.map */

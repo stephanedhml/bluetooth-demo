@@ -1,0 +1,8 @@
+{
+  "/vts/rest/v2.0/detokenize": {
+    "target": "https://10.3.201.98/vts/rest/v2.0/detokenize",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

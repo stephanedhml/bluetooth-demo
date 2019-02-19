@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <section class="mat-typography">
+      <mat-icon class="back-button" routerLink="/user/list">arrow_back</mat-icon>
+      <h1 class="page-title">Add User</h1>
+    </section>
+  </div>
+  <div class="row">
+    <form [formGroup]="form" class="form-container" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <label>Name</label>
+          <input type="text" formControlName="name" class="form-control"/>
+      </div>
+      <div class="form-group">
+          <label>Role</label>
+          <select class="form-control" #format ngControl="role"  formControlName="role">
+            <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+          <label>Ring</label><br>
+          <div *ngIf="ringExist" class="form-error">This ring is already been registered to another user.</div>
+          <input formControlName="ring" class="ring-information" readonly>
+          <button mat-raised-button color="basic" (click)="registerRing()">Connect Ring</button>
+      </div>
+      <div class="form-group">
+          <button class="btn btn-primary">Add User</button>
+      </div>
+    </form>
+  </div>
+</div>
