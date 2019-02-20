@@ -14,13 +14,18 @@ app.all('*', function(req, res, next) {
 });
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/bluetooth-demo'));
-app.use(cors({
-  'allowedHeaders': '*',
-  'exposedHeaders': '*',
-  'origin': '*',
-  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  'preflightContinue': false
-})); //<-- That`s it, no more code needed!
+
+var whitelist = [
+    'https://ec2-35-172-115-4.compute-1.amazonaws.com',
+];
+var corsOptions = {
+    origin: function(origin, callback){
+        var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
+        callback(null, originIsWhitelisted);
+    },
+    credentials: true
+};
+app.use(cors(corsOptions));
 app.get('/*', function(req,res) {
 res.sendFile(path.join(__dirname+'/dist/bluetooth-demo/index.html'));
 });
