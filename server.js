@@ -9,12 +9,18 @@ const app = express();
 
 app.all('*', function(req, res, next) {
    res.header("Access-Control-Allow-Origin", "*");
-   res.header("Access-Control-Allow-Headers", "X-Requested-With");
+   res.header("Access-Control-Allow-Headers", "*");
    next();
 });
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/bluetooth-demo'));
-app.use(cors()); //<-- That`s it, no more code needed!
+app.use(corscors({
+  'allowedHeaders': '*',
+  'exposedHeaders': '*',
+  'origin': '*',
+  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  'preflightContinue': false
+})); //<-- That`s it, no more code needed!
 app.get('/*', function(req,res) {
 res.sendFile(path.join(__dirname+'/dist/bluetooth-demo/index.html'));
 });
