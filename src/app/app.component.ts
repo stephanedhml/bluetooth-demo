@@ -73,9 +73,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     // this.streamRingStatus()
     localStorage.setItem("session", JSON.stringify({name:"Stephane",role:"receptionist",ring:"Motiv-ad7a",id:1}));
     this.user = "Stephane"
-    console.log(this.user)
     setTimeout(()=>{
-      console.log('timeout')
           this.user = "Stephane"
           this.appService.login();
           this.appService.setUsername(JSON.parse(localStorage.getItem('session')).name)
