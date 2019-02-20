@@ -14,7 +14,7 @@ app.all('*', function(req, res, next) {
 });
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/bluetooth-demo'));
-app.use(corscors({
+app.use(cors({
   'allowedHeaders': '*',
   'exposedHeaders': '*',
   'origin': '*',
