@@ -11,8 +11,7 @@
         <div class="landingpage--sub-title">Dynamic Data Masking</div>
         <div *ngIf="!loading">
           <div class="example-button-row">
-            <!-- <button mat-raised-button color="basic" (click)="connectToRing()">Scan Ring</button> -->
-            <button mat-raised-button color="basic" class="scan-ring--button" (click)="login()">Scan Ring</button>
+            <button mat-raised-button color="basic" class="scan-ring--button" (click)="connectToRing()">Scan Ring</button>
           </div>
         </div>
         <div *ngIf="loading">

@@ -38,11 +38,34 @@ table {
 
 .list-title {
   padding-top: 30px;
+  display: inline-block;
 }
 
 .example-margin label {
   margin-top: 6px;
   margin-right: 6px;
+}
+
+.role-label {
+  padding: 0px 7px;
+  color: white;
+  margin-left: 10px;
+  border-radius: 3px;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.role-label, .receptionist {
+  background: #2ecc71;
+}
+
+.role-label, .finance {
+  background: #f9690e;
+}
+
+.role-label, .doctor {
+  background: #00b5cc;
 }
 
 .landingpage--title {
@@ -263,6 +286,12 @@ svg {
   height: 55px;
   margin: 20px;
   display: inline-block;
+}
+
+.loading-container {
+  text-align: center;
+  background: white;
+  margin-top: -30px;
 }
 
 /*# sourceMappingURL=styles.scss.map */

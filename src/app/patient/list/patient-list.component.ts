@@ -22,6 +22,7 @@ export class PatientListComponent extends AppComponent implements OnInit {
   dataSource = new MatTableDataSource(this.data);
   url:string = 'patients'
   role:string = 'doctor'
+  loading:boolean = false;
 
   constructor(protected appService: AppService, protected router: Router, protected cd: ChangeDetectorRef) {
     super(appService, router, cd)
@@ -32,12 +33,13 @@ export class PatientListComponent extends AppComponent implements OnInit {
   }
 
   loadData(){
+    this.loading = true;
     this.changeRole(JSON.parse(localStorage.getItem('session')).role);
     this.appService.get(this.url).subscribe((data: Array<any>)  => {
-      console.log(data)
       this.data = []
       for (let patient of data){
         this.appService.detokenize(this.role, patient.ssn).then(response => {
+                this.loading = false;
                 patient['ssn'] = response['data'];
                 if(this.role != 'doctor'){
                   this.appService.detokenize(this.role, patient.cc).then(response => {

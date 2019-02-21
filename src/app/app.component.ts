@@ -71,10 +71,10 @@ export class AppComponent implements OnInit, AfterViewChecked {
   login(){
     this.loading = true
     // this.streamRingStatus()
-    localStorage.setItem("session", JSON.stringify({name:"Stephane",role:"receptionist",ring:"Motiv-ad7a",id:1}));
-    this.user = "Stephane"
+    // localStorage.setItem("session", JSON.stringify({name:"Stephane",role:"receptionist",ring:"Motiv-ad7a",id:1}));
+    // this.user = "Stephane"
     setTimeout(()=>{
-          this.user = "Stephane"
+          // this.user = "Stephane"
           this.appService.login();
           this.appService.setUsername(JSON.parse(localStorage.getItem('session')).name)
           this.appService.setRole(JSON.parse(localStorage.getItem('session')).role)
