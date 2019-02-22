@@ -70,7 +70,6 @@ export class AppService {
       let headers = new HttpHeaders();
       headers = headers.append("Authorization", "Basic " + btoa(username+":"+this.password));
       headers = headers.append("Content-Type", "application/x-www-form-urlencoded");
-      console.log(headers)
       var data = JSON.stringify({"tokengroup" : "vtsUsers" , "token" : token, "tokentemplate" : "vtsUsersTemplate" });
       return this.http.post(this.detokenizeUrl, data, {headers: headers})
         .toPromise()
@@ -93,7 +92,7 @@ export class AppService {
       try {
         return this.ble
           .discover({
-            filters:[{namePrefix:'Motiv'}]
+            filters:[{namePrefix:'M'}]
           })
       } catch (e) {
         console.error('Oops! can not read value from %s');

@@ -2,7 +2,6 @@
   <span class="mat-typography navbar-logo navbar-brand mb-0 h1"><img src="./assets/img/thales_logo.png" class="navbar-logo"></span>
   <span class="navbar-right add-user--link" (click)="addUser()" *ngIf="!loggedIn">Add Ring</span>
   <span class="navbar-right logout-button" (click)="logout()" *ngIf="loggedIn">Logout</span>
-  <!-- <img src="./assets/img/{{userRole}}.png" *ngIf="username && loggedIn" class="user-icon"> -->
   <span class="navbar-right navbar-username" *ngIf="username && loggedIn">Welcome <strong>{{username}}</strong></span>
   <div class="container nav-container" *ngIf="!loggedIn">
     <div class="row nav-row">
