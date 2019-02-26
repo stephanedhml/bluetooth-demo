@@ -60,6 +60,7 @@ export class PatientListComponent extends AppComponent implements OnInit {
                 }
               },
         error => {
+          console.log('detokenize failed')
           console.log(error)
         });
       }
