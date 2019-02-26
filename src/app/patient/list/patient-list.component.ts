@@ -36,9 +36,12 @@ export class PatientListComponent extends AppComponent implements OnInit {
     this.loading = true;
     this.changeRole(JSON.parse(localStorage.getItem('session')).role);
     this.appService.get(this.url).subscribe((data: Array<any>)  => {
+      console.log(data)
       this.data = []
       for (let patient of data){
+        console.log(patient)
         this.appService.detokenize(this.role, patient.ssn).then(response => {
+                console.log(response)
                 this.loading = false;
                 patient['ssn'] = response['data'];
                 if(this.role != 'doctor'){
